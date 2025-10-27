@@ -66,51 +66,51 @@
 
 // Question 4
 
- function Person(name, gender, address, education, profession) {
-      this.name = name
-      this.gender = gender
-      this.address = address
-      this.education = education
-      this.profession = profession
-    }
+//  function Person(name, gender, address, education, profession) {
+//       this.name = name
+//       this.gender = gender
+//       this.address = address
+//       this.education = education
+//       this.profession = profession
+//     }
 
-    function addRecord() {
-      // Get form values
-      let name = document.getElementById("name").value
-      let genderElement = document.querySelector('input[name="gender"]:checked')
-      let address = document.getElementById("address").value
-      let education = document.getElementById("education").value
-      let profession = document.getElementById("profession").value
+//     function addRecord() {
 
-      // Check if all fields are filled
-      if (!name || !genderElement || !address || !education || !profession) {
-        alert("Please fill all fields!")
-        return
-      }
-
-      let gender = genderElement.value
-
-    
-      let person = new Person(name, gender, address, education, profession)
-
-
-      let recordsDiv = document.getElementById("records")
-      let record = document.createElement("p")
-      record.innerHTML = 
-        "<b>Name:</b> " + person.name + 
-        " | <b>Gender:</b> " + person.gender + 
-        " | <b>Address:</b> " + person.address + 
-        " | <b>Education:</b> " + person.education + 
-        " | <b>Profession:</b> " + person.profession
-      recordsDiv.appendChild(record)
+//       let name = document.getElementById("name").value
+//       let genderElement = document.querySelector('input[name="gender"]:checked')
+//       let address = document.getElementById("address").value
+//       let education = document.getElementById("education").value
+//       let profession = document.getElementById("profession").value
 
       
-      document.getElementById("name").value = ""
-      document.getElementById("address").value = ""
-      document.getElementById("education").value = ""
-      document.getElementById("profession").value = ""
-      genderElement.checked = false
-    }
+//       if (!name || !genderElement || !address || !education || !profession) {
+//         alert("Please fill all fields!")
+//         return
+//       }
+
+//       let gender = genderElement.value
+
+    
+//       let person = new Person(name, gender, address, education, profession)
+
+
+//       let recordsDiv = document.getElementById("records")
+//       let record = document.createElement("p")
+//       record.innerHTML = 
+//         "<b>Name:</b> " + person.name + 
+//         " | <b>Gender:</b> " + person.gender + 
+//         " | <b>Address:</b> " + person.address + 
+//         " | <b>Education:</b> " + person.education + 
+//         " | <b>Profession:</b> " + person.profession
+//       recordsDiv.appendChild(record)
+
+      
+//       document.getElementById("name").value = ""
+//       document.getElementById("address").value = ""
+//       document.getElementById("education").value = ""
+//       document.getElementById("profession").value = ""
+//       genderElement.checked = false
+//     }
 
 
 
