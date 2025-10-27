@@ -1,14 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>OBJECT</title>
 </head>
+
 <body>
-    
+    <!-- <h1>Object Assignment</h1> -->
+
+    <!-- Question 4 -->
+
+    <h2>Population Record Form</h2>
+
+    <label>Name:</label>
+    <input type="text" id="name"><br><br>
+
+    <label>Gender:</label>
+    <input class="gender" type="radio" name="gender" value="Male"> Male
+    <input class="gender"type="radio" name="gender" value="Female"> Female<br><br>
+
+    <label>Address:</label>
+    <input type="text" id="address"><br><br>
+
+    <label>Education:</label>
+    <select id="education">
+        <option value="">Select</option>
+        <option value="Matric">Matric</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Bachelor">Bachelor</option>
+        <option value="Master">Master</option>
+    </select><br><br>
+
+    <label>Profession:</label>
+    <select id="profession">
+        <option value="">Select</option>
+        <option value="Student">Student</option>
+        <option value="Teacher">Teacher</option>
+        <option value="Engineer">Engineer</option>
+        <option value="Doctor">Doctor</option>
+    </select><br><br>
+
+    <button onclick="addRecord()">Add Record</button>
+
+    <h3>All Records</h3>
+    <div id="records"></div>
+
 
 
     <script src="app.js"></script>
 </body>
+
 </html>

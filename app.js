@@ -1,4 +1,4 @@
-// Chapter Objeccts
+// Chapter Objects
 
 // Question 1
 
@@ -22,8 +22,7 @@
 
 // Question 2
 
-// Create the object
-// let user = {
+// let userDetails = {
 //   name: "Ali Khan",
 //   email: "ali@example.com",
 //   password: "12345",
@@ -34,15 +33,15 @@
 // }
 
 
-// console.log("age" in user)     
-// console.log("country" in user)   
+// console.log("age" in userDetails)     
+// console.log("country" in userDetails)   
 
-// console.log("firstName" in user) 
-// console.log("lastName" in user)  
+// console.log("firstName" in userDetails) 
+// console.log("lastName" in userDetails)  
 
 // Question 3
 
-// function data(a, b, c, d, e) {
+// function PersonData(a, b, c, d, e) {
 
 //     this.name = a
 //     this.age = b
@@ -52,15 +51,66 @@
 
 // }
 
-// let student1 = new data("Ali", 22, "Male", "Computer Science", "Karachi");
-// let student2 = new data("Sara", 20, "Female", "Mathematics", "Lahore");
-// let student3 = new data("John", 23, "Male", "Physics", "Islamabad");
+// let student1 = new PersonData("Ali", 22, "Male", "Computer Science", "Multan")
+// let student2 = new PersonData("Sara", 20, "Female", "Engineering", "Lahore")
+// let student3 = new PersonData("John", 23, "Male", "Physics", "Islamabad")
+// let student4 = new PersonData("Huzaifa", 17, "Male", "Mathematics", "Karachi")
+// let student5 = new PersonData("Novera", 17, "Female", "Medical", "Karachi")
+
 
 // console.log(student1)
 // console.log(student2)
 // console.log(student3)
+// console.log(student4)
+// console.log(student5)
 
 // Question 4
+
+ function Person(name, gender, address, education, profession) {
+      this.name = name
+      this.gender = gender
+      this.address = address
+      this.education = education
+      this.profession = profession
+    }
+
+    function addRecord() {
+      // Get form values
+      let name = document.getElementById("name").value
+      let genderElement = document.querySelector('input[name="gender"]:checked')
+      let address = document.getElementById("address").value
+      let education = document.getElementById("education").value
+      let profession = document.getElementById("profession").value
+
+      // Check if all fields are filled
+      if (!name || !genderElement || !address || !education || !profession) {
+        alert("Please fill all fields!")
+        return
+      }
+
+      let gender = genderElement.value
+
+    
+      let person = new Person(name, gender, address, education, profession)
+
+
+      let recordsDiv = document.getElementById("records")
+      let record = document.createElement("p")
+      record.innerHTML = 
+        "<b>Name:</b> " + person.name + 
+        " | <b>Gender:</b> " + person.gender + 
+        " | <b>Address:</b> " + person.address + 
+        " | <b>Education:</b> " + person.education + 
+        " | <b>Profession:</b> " + person.profession
+      recordsDiv.appendChild(record)
+
+      
+      document.getElementById("name").value = ""
+      document.getElementById("address").value = ""
+      document.getElementById("education").value = ""
+      document.getElementById("profession").value = ""
+      genderElement.checked = false
+    }
 
 
 
